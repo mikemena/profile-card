@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 
-function Skill(props) {
-  console.log(props);
+function Skill({ skillsObj }) {
+  const { name, imageUrl: image, medalUrl: medal } = skillsObj;
+
   return (
     <div className="skill-container">
-      <h3 className="skill-name">{props.name}</h3>
-      <img src={props.image} />
+      <img src={medal} alt={name} />
+      <h3 className="skill-name">{name}</h3>
+      <img src={image} alt={name} />
     </div>
   );
 }
