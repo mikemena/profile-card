@@ -1,4 +1,3 @@
-/* Toggle.css */
 .toggle-switch {
   position: relative;
   display: inline-block;
@@ -39,11 +38,11 @@
 }
 
 input:checked + .switch {
-  background-color: #dcf500;
+  background-color: #34495e;
 }
 
 input:focus + .switch {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #95a5a6;
 }
 
 input:checked + .switch:before {
