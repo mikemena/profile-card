@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 
-function Skill({ skillsObj }) {
+function Skill({ skillsObj, isDarkMode }) {
   const { name, imageUrl: image, medalUrl: medal } = skillsObj;
+  const skillPillClass = isDarkMode ? '.skill-pill dark' : '.skill-pill';
 
   return (
     <div className="skill-container">

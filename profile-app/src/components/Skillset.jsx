@@ -1,14 +1,16 @@
 import Skill from './Skill';
 import skillsData from '../data/skillsData';
 
-function Skillset() {
+function Skillset({ isDarkMode }) {
   const skills = skillsData;
-  console.log(skills);
+  const skillsetClass = isDarkMode
+    ? 'skillset-container dark'
+    : 'skillset-container';
 
   return (
-    <div className="skillset-container">
+    <div className={skillsetClass}>
       {skills.map((skill) => (
-        <Skill key={skill.id} skillsObj={skill} />
+        <Skill key={skill.id} skillsObj={skill} isDarkMode={isDarkMode} />
       ))}
     </div>
   );

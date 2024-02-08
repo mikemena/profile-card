@@ -1,9 +1,18 @@
+import { useState } from 'react';
 import './App.css';
 import Skillset from './components/Skillset';
+import Toggle from './components/Toggle/Toggle';
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const handleToggle = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
     <main className="main">
+      <Toggle isDarkMode={isDarkMode} onToggle={handleToggle} />
       <h1 className="app-header">Profile Cards</h1>
       <div className="card">
         <img className="profile-image" src="../public/images/tokyo.png" />
@@ -18,7 +27,7 @@ function App() {
           for nature and animals, I bring creativity, dedication, and a
           collaborative spirit to every project I undertake.
         </p>
-        <Skillset />
+        <Skillset isDarkMode={isDarkMode} />
       </div>
     </main>
   );
