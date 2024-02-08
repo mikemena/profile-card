@@ -3,10 +3,10 @@ import Skillset from './components/Skillset';
 
 function App() {
   return (
-    <>
+    <main className="main">
       <h1 className="app-header">Profile Cards</h1>
       <div className="card">
-        <img src="../public/images/tokyo.png" />
+        <img className="profile-image" src="../public/images/tokyo.png" />
         <h1>Tokyo</h1>
         <p>
           As a passionate software engineer, I thrive on solving complex
@@ -20,7 +20,7 @@ function App() {
         </p>
         <Skillset />
       </div>
-    </>
+    </main>
   );
 }
 

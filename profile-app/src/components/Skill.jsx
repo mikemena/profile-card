@@ -5,9 +5,11 @@ function Skill({ skillsObj }) {
 
   return (
     <div className="skill-container">
-      <img src={medal} alt={name} />
-      <h3 className="skill-name">{name}</h3>
-      <img src={image} alt={name} />
+      <div className="skill-pill">
+        <img className="medal-icon" src={medal} alt={name} />
+        <h3 className="skill-name">{name}</h3>
+        <img className="skill-icon" src={image} alt={name} />
+      </div>
     </div>
   );
 }
